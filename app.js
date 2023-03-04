@@ -78,7 +78,10 @@ function enterSymbol (button) {
     button.disabled = true;
     checkXO();
     txtXO.innerHTML = `Turn <span> ${xo.innerHTML} </span> `; 
-    isEnd ()
+    isXWin();
+    isOWin();
+    isEnd ();
+
 
 }
 
@@ -98,6 +101,149 @@ function isEnd () {
         }
 }
 
+function buttonsDisabled () {
+    buttonZero.disabled = true;
+    buttonOne.disabled = true;
+    buttonTwo.disabled = true;
+    buttonThree.disabled = true;
+    buttonFour.disabled = true;
+    buttonFive.disabled = true;
+    buttonSix.disabled = true;
+    buttonSeven.disabled = true;
+    buttonEight.disabled = true;
+
+    buttonZero.style.cursor = 'auto';
+    buttonOne.style.cursor = 'auto';
+    buttonTwo.style.cursor = 'auto';
+    buttonThree.style.cursor = 'auto';
+    buttonFour.style.cursor = 'auto';
+    buttonFive.style.cursor = 'auto';
+    buttonSix.style.cursor = 'auto';
+    buttonSeven.style.cursor = 'auto';
+    buttonEight.style.cursor = 'auto';
+}
+function isXWin () {
+    if(
+        buttonZero.innerHTML =='X' 
+        && buttonOne.innerHTML == 'X'
+        && buttonTwo.innerHTML == 'X') {
+            buttonsDisabled();
+            txtXO.innerHTML = '<span>X</span> wins!'
+            
+    } else if (
+        buttonThree.innerHTML =='X' 
+        && buttonFour.innerHTML == 'X'
+        && buttonFive.innerHTML == 'X' 
+    ) {
+        buttonsDisabled();
+        txtXO.innerHTML = '<span>X</span> wins!'
+    } else if (
+        buttonSix.innerHTML =='X' 
+        && buttonSeven.innerHTML == 'X'
+        && buttonEight.innerHTML == 'X' 
+        ) {
+            buttonsDisabled();
+            txtXO.innerHTML = '<span>X</span> wins!'
+    } else if (
+        buttonZero.innerHTML =='X' 
+        && buttonFour.innerHTML == 'X'
+        && buttonEight.innerHTML == 'X' 
+        ) {
+            buttonsDisabled();
+            txtXO.innerHTML = '<span>X</span> wins!'
+    } else if (
+        buttonTwo.innerHTML =='X' 
+        && buttonFour.innerHTML == 'X'
+        && buttonSix.innerHTML == 'X' 
+        ) {
+            buttonsDisabled();
+            txtXO.innerHTML = '<span>X</span> wins!'
+    } else if (
+        buttonZero.innerHTML =='X' 
+        && buttonThree.innerHTML == 'X'
+        && buttonSix.innerHTML == 'X' 
+        ) {
+            buttonsDisabled();
+            txtXO.innerHTML = '<span>X</span> wins!'
+    } else if (
+        buttonOne.innerHTML =='X' 
+        && buttonFour.innerHTML == 'X'
+        && buttonSeven.innerHTML == 'X' 
+        ) {
+            buttonsDisabled();
+            txtXO.innerHTML = '<span>X</span> wins!'
+    } else if (
+        buttonTwo.innerHTML =='X' 
+        && buttonFive.innerHTML == 'X'
+        && buttonEight.innerHTML == 'X' 
+        ) {
+            buttonsDisabled();
+            txtXO.innerHTML = '<span>X</span> wins!'
+    } 
+        
+            
+}
+function isOWin () {
+    if(
+        buttonZero.innerHTML =='O' 
+        && buttonOne.innerHTML == 'O'
+        && buttonTwo.innerHTML == 'O') {
+            buttonsDisabled();
+            txtXO.innerHTML = '<span>O</span> wins!'
+            
+    } else if (
+        buttonThree.innerHTML =='O' 
+        && buttonFour.innerHTML == 'O'
+        && buttonFive.innerHTML == 'O' 
+    ) {
+        buttonsDisabled();
+        txtXO.innerHTML = '<span>O</span> wins!'
+    } else if (
+        buttonSix.innerHTML =='O' 
+        && buttonSeven.innerHTML == 'O'
+        && buttonEight.innerHTML == 'O' 
+        ) {
+            buttonsDisabled();
+            txtXO.innerHTML = '<span>O</span> wins!'
+    } else if (
+        buttonZero.innerHTML =='O' 
+        && buttonFour.innerHTML == 'O'
+        && buttonEight.innerHTML == 'O' 
+        ) {
+            buttonsDisabled();
+            txtXO.innerHTML = '<span>O</span> wins!'
+    } else if (
+        buttonTwo.innerHTML =='O' 
+        && buttonFour.innerHTML == 'O'
+        && buttonSix.innerHTML == 'O' 
+        ) {
+            buttonsDisabled();
+            txtXO.innerHTML = '<span>O</span> wins!'
+    } else if (
+        buttonZero.innerHTML =='O' 
+        && buttonThree.innerHTML == 'O'
+        && buttonSix.innerHTML == 'O' 
+        ) {
+            buttonsDisabled();
+            txtXO.innerHTML = '<span>O</span> wins!'
+    } else if (
+        buttonOne.innerHTML =='O' 
+        && buttonFour.innerHTML == 'O'
+        && buttonSeven.innerHTML == 'O' 
+        ) {
+            buttonsDisabled();
+            txtXO.innerHTML = '<span>O</span> wins!'
+    } else if (
+        buttonTwo.innerHTML =='O' 
+        && buttonFive.innerHTML == 'O'
+        && buttonEight.innerHTML == 'O' 
+        ) {
+            buttonsDisabled();
+            txtXO.innerHTML = '<span>O</span> wins!'
+    } 
+        
+            
+}
 
 
 
