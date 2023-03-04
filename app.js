@@ -96,7 +96,7 @@ function isEnd () {
         && buttonSeven.innerHTML !== '' 
         && buttonEight.innerHTML !== ''
         ) {
-            txtXO.innerHTML = 'Game is <span>over</span>'
+            txtXO.innerHTML = 'It is <span>drow!</span>'
             xo.innerHTML = ''
         }
 }
