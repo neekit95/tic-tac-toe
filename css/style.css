@@ -179,3 +179,7 @@ body {
 button {
   cursor: pointer;
 }
+
+.reset {
+  cursor: pointer;
+}
