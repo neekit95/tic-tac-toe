@@ -210,13 +210,13 @@ function isXWin () {
             buttonFour.style.color = 'rgb(192, 10, 10)'; 
             buttonSix.style.color = 'rgb(192, 10, 10)'; 
     } else if (
-        buttonTwo.innerHTML =='X' 
+        buttonZero.innerHTML =='X' 
         && buttonThree.innerHTML == 'X'
         && buttonSix.innerHTML == 'X' 
         ) {
             buttonsDisabled();
             txtXO.innerHTML = '<span>X</span> wins!'
-            buttonTwo.style.color = 'rgb(192, 10, 10)'; 
+            buttonZero.style.color = 'rgb(192, 10, 10)'; 
             buttonThree.style.color = 'rgb(192, 10, 10)'; 
             buttonSix.style.color = 'rgb(192, 10, 10)';
     } else if (
@@ -295,13 +295,13 @@ function isOWin () {
             buttonFour.style.color = 'rgb(192, 10, 10)'; 
             buttonSix.style.color = 'rgb(192, 10, 10)'; 
     } else if (
-        buttonTwo.innerHTML =='O' 
+        buttonZero.innerHTML =='O' 
         && buttonThree.innerHTML == 'O'
         && buttonSix.innerHTML == 'O' 
         ) {
             buttonsDisabled();
             txtXO.innerHTML = '<span>O</span> wins!'
-            buttonTwo.style.color = 'rgb(192, 10, 10)'; 
+            buttonZero.style.color = 'rgb(192, 10, 10)'; 
             buttonThree.style.color = 'rgb(192, 10, 10)'; 
             buttonSix.style.color = 'rgb(192, 10, 10)';
     } else if (
