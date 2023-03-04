@@ -23,6 +23,25 @@ buttonSeven.addEventListener('click', () => enterSymbol(buttonSeven) );
 buttonEight.addEventListener('click', () => enterSymbol(buttonEight) );
 buttonReset.addEventListener('click', () => reset());
 
+// function hover (button) {
+//     if(button == '') {
+//     return button.addEventListener ('mouseover', () => button.bacgroundColor = 'red');
+//     }    
+// }
+
+// hover ();
+
+
+// buttonOne.addEventListener('mouseover', () => enterSymbol(buttonOne) );
+// buttonTwo.addEventListener('mouseover', () => enterSymbol(buttonTwo) );
+// buttonThree.addEventListener('mouseover', () => enterSymbol(buttonThree) );
+// buttonFour.addEventListener('mouseover', () => enterSymbol(buttonFour) );
+// buttonFive.addEventListener('mouseover', () => enterSymbol(buttonFive) );
+// buttonSix.addEventListener('mouseover', () => enterSymbol(buttonSix) );
+// buttonSeven.addEventListener('mouseover', () => enterSymbol(buttonSeven) );
+// buttonEight.addEventListener('mouseover', () => enterSymbol(buttonEight) );
+
+
 function reset () {
     buttonZero.innerHTML = '';
     buttonOne.innerHTML = '';
@@ -76,13 +95,12 @@ function enterSymbol (button) {
     button.innerHTML = xo.innerHTML;
     button.style.cursor = 'auto';
     button.disabled = true;
+    button.style.color = '';
     checkXO();
     txtXO.innerHTML = `Turn <span> ${xo.innerHTML} </span> `; 
+    isEnd ();
     isXWin();
     isOWin();
-    isEnd ();
-
-
 }
 
 function isEnd () {
@@ -99,8 +117,16 @@ function isEnd () {
             txtXO.innerHTML = 'It is <span>drow!</span>'
             xo.innerHTML = ''
         }
+    buttonZero.style.color = '';
+    buttonOne.style.color = '';
+    buttonTwo.style.color = '';
+    buttonThree.style.color = '';
+    buttonFour.style.color = '';
+    buttonFive.style.color = '';
+    buttonSix.style.color = '';
+    buttonSeven.style.color = '';
+    buttonEight.style.color = '';
 }
-
 function buttonsDisabled () {
     buttonZero.disabled = true;
     buttonOne.disabled = true;
@@ -127,8 +153,11 @@ function isXWin () {
         buttonZero.innerHTML =='X' 
         && buttonOne.innerHTML == 'X'
         && buttonTwo.innerHTML == 'X') {
-            buttonsDisabled();
-            txtXO.innerHTML = '<span>X</span> wins!'
+        buttonsDisabled();
+        txtXO.innerHTML = '<span>X</span> wins!'
+        buttonZero.style.color = 'rgb(192, 10, 10)'; 
+        buttonOne.style.color = 'rgb(192, 10, 10)'; 
+        buttonTwo.style.color = 'rgb(192, 10, 10)'; 
             
     } else if (
         buttonThree.innerHTML =='X' 
@@ -137,6 +166,9 @@ function isXWin () {
     ) {
         buttonsDisabled();
         txtXO.innerHTML = '<span>X</span> wins!'
+        buttonThree.style.color = 'rgb(192, 10, 10)'; 
+        buttonFour.style.color = 'rgb(192, 10, 10)'; 
+        buttonFive.style.color = 'rgb(192, 10, 10)'; 
     } else if (
         buttonSix.innerHTML =='X' 
         && buttonSeven.innerHTML == 'X'
@@ -144,6 +176,9 @@ function isXWin () {
         ) {
             buttonsDisabled();
             txtXO.innerHTML = '<span>X</span> wins!'
+            buttonSix.style.color = 'rgb(192, 10, 10)'; 
+            buttonSeven.style.color = 'rgb(192, 10, 10)'; 
+            buttonEight.style.color = 'rgb(192, 10, 10)'; 
     } else if (
         buttonZero.innerHTML =='X' 
         && buttonFour.innerHTML == 'X'
@@ -151,6 +186,9 @@ function isXWin () {
         ) {
             buttonsDisabled();
             txtXO.innerHTML = '<span>X</span> wins!'
+            buttonZero.style.color = 'rgb(192, 10, 10)'; 
+            buttonFour.style.color = 'rgb(192, 10, 10)'; 
+            buttonEight.style.color = 'rgb(192, 10, 10)'; 
     } else if (
         buttonTwo.innerHTML =='X' 
         && buttonFour.innerHTML == 'X'
@@ -158,13 +196,19 @@ function isXWin () {
         ) {
             buttonsDisabled();
             txtXO.innerHTML = '<span>X</span> wins!'
+            buttonTwo.style.color = 'rgb(192, 10, 10)'; 
+            buttonFour.style.color = 'rgb(192, 10, 10)'; 
+            buttonSix.style.color = 'rgb(192, 10, 10)'; 
     } else if (
-        buttonZero.innerHTML =='X' 
+        buttonTwo.innerHTML =='X' 
         && buttonThree.innerHTML == 'X'
         && buttonSix.innerHTML == 'X' 
         ) {
             buttonsDisabled();
             txtXO.innerHTML = '<span>X</span> wins!'
+            buttonTwo.style.color = 'rgb(192, 10, 10)'; 
+            buttonThree.style.color = 'rgb(192, 10, 10)'; 
+            buttonSix.style.color = 'rgb(192, 10, 10)';
     } else if (
         buttonOne.innerHTML =='X' 
         && buttonFour.innerHTML == 'X'
@@ -172,6 +216,9 @@ function isXWin () {
         ) {
             buttonsDisabled();
             txtXO.innerHTML = '<span>X</span> wins!'
+            buttonOne.style.color = 'rgb(192, 10, 10)'; 
+            buttonFour.style.color = 'rgb(192, 10, 10)'; 
+            buttonSeven.style.color = 'rgb(192, 10, 10)';
     } else if (
         buttonTwo.innerHTML =='X' 
         && buttonFive.innerHTML == 'X'
@@ -179,6 +226,9 @@ function isXWin () {
         ) {
             buttonsDisabled();
             txtXO.innerHTML = '<span>X</span> wins!'
+            buttonTwo.style.color = 'rgb(192, 10, 10)'; 
+            buttonFive.style.color = 'rgb(192, 10, 10)'; 
+            buttonEight.style.color = 'rgb(192, 10, 10)';
     } 
         
             
@@ -188,8 +238,11 @@ function isOWin () {
         buttonZero.innerHTML =='O' 
         && buttonOne.innerHTML == 'O'
         && buttonTwo.innerHTML == 'O') {
-            buttonsDisabled();
-            txtXO.innerHTML = '<span>O</span> wins!'
+        buttonsDisabled();
+        txtXO.innerHTML = '<span>O</span> wins!'
+        buttonZero.style.color = 'rgb(192, 10, 10)'; 
+        buttonOne.style.color = 'rgb(192, 10, 10)'; 
+        buttonTwo.style.color = 'rgb(192, 10, 10)'; 
             
     } else if (
         buttonThree.innerHTML =='O' 
@@ -198,6 +251,9 @@ function isOWin () {
     ) {
         buttonsDisabled();
         txtXO.innerHTML = '<span>O</span> wins!'
+        buttonThree.style.color = 'rgb(192, 10, 10)'; 
+        buttonFour.style.color = 'rgb(192, 10, 10)'; 
+        buttonFive.style.color = 'rgb(192, 10, 10)'; 
     } else if (
         buttonSix.innerHTML =='O' 
         && buttonSeven.innerHTML == 'O'
@@ -205,6 +261,9 @@ function isOWin () {
         ) {
             buttonsDisabled();
             txtXO.innerHTML = '<span>O</span> wins!'
+            buttonSix.style.color = 'rgb(192, 10, 10)'; 
+            buttonSeven.style.color = 'rgb(192, 10, 10)'; 
+            buttonEight.style.color = 'rgb(192, 10, 10)'; 
     } else if (
         buttonZero.innerHTML =='O' 
         && buttonFour.innerHTML == 'O'
@@ -212,6 +271,9 @@ function isOWin () {
         ) {
             buttonsDisabled();
             txtXO.innerHTML = '<span>O</span> wins!'
+            buttonZero.style.color = 'rgb(192, 10, 10)'; 
+            buttonFour.style.color = 'rgb(192, 10, 10)'; 
+            buttonEight.style.color = 'rgb(192, 10, 10)'; 
     } else if (
         buttonTwo.innerHTML =='O' 
         && buttonFour.innerHTML == 'O'
@@ -219,13 +281,19 @@ function isOWin () {
         ) {
             buttonsDisabled();
             txtXO.innerHTML = '<span>O</span> wins!'
+            buttonTwo.style.color = 'rgb(192, 10, 10)'; 
+            buttonFour.style.color = 'rgb(192, 10, 10)'; 
+            buttonSix.style.color = 'rgb(192, 10, 10)'; 
     } else if (
-        buttonZero.innerHTML =='O' 
+        buttonTwo.innerHTML =='O' 
         && buttonThree.innerHTML == 'O'
         && buttonSix.innerHTML == 'O' 
         ) {
             buttonsDisabled();
             txtXO.innerHTML = '<span>O</span> wins!'
+            buttonTwo.style.color = 'rgb(192, 10, 10)'; 
+            buttonThree.style.color = 'rgb(192, 10, 10)'; 
+            buttonSix.style.color = 'rgb(192, 10, 10)';
     } else if (
         buttonOne.innerHTML =='O' 
         && buttonFour.innerHTML == 'O'
@@ -233,6 +301,9 @@ function isOWin () {
         ) {
             buttonsDisabled();
             txtXO.innerHTML = '<span>O</span> wins!'
+            buttonOne.style.color = 'rgb(192, 10, 10)'; 
+            buttonFour.style.color = 'rgb(192, 10, 10)'; 
+            buttonSeven.style.color = 'rgb(192, 10, 10)';
     } else if (
         buttonTwo.innerHTML =='O' 
         && buttonFive.innerHTML == 'O'
@@ -240,10 +311,77 @@ function isOWin () {
         ) {
             buttonsDisabled();
             txtXO.innerHTML = '<span>O</span> wins!'
+            buttonTwo.style.color = 'rgb(192, 10, 10)'; 
+            buttonFive.style.color = 'rgb(192, 10, 10)'; 
+            buttonEight.style.color = 'rgb(192, 10, 10)';
     } 
         
             
 }
+
+
+
+// function isOWin () {
+//     if(
+//         buttonZero.innerHTML =='O' 
+//         && buttonOne.innerHTML == 'O'
+//         && buttonTwo.innerHTML == 'O') {
+//             buttonsDisabled();
+//             txtXO.innerHTML = '<span>O</span> wins!'
+            
+//     } else if (
+//         buttonThree.innerHTML =='O' 
+//         && buttonFour.innerHTML == 'O'
+//         && buttonFive.innerHTML == 'O' 
+//     ) {
+//         buttonsDisabled();
+//         txtXO.innerHTML = '<span>O</span> wins!'
+//     } else if (
+//         buttonSix.innerHTML =='O' 
+//         && buttonSeven.innerHTML == 'O'
+//         && buttonEight.innerHTML == 'O' 
+//         ) {
+//             buttonsDisabled();
+//             txtXO.innerHTML = '<span>O</span> wins!'
+//     } else if (
+//         buttonZero.innerHTML =='O' 
+//         && buttonFour.innerHTML == 'O'
+//         && buttonEight.innerHTML == 'O' 
+//         ) {
+//             buttonsDisabled();
+//             txtXO.innerHTML = '<span>O</span> wins!'
+//     } else if (
+//         buttonTwo.innerHTML =='O' 
+//         && buttonFour.innerHTML == 'O'
+//         && buttonSix.innerHTML == 'O' 
+//         ) {
+//             buttonsDisabled();
+//             txtXO.innerHTML = '<span>O</span> wins!'
+//     } else if (
+//         buttonZero.innerHTML =='O' 
+//         && buttonThree.innerHTML == 'O'
+//         && buttonSix.innerHTML == 'O' 
+//         ) {
+//             buttonsDisabled();
+//             txtXO.innerHTML = '<span>O</span> wins!'
+//     } else if (
+//         buttonOne.innerHTML =='O' 
+//         && buttonFour.innerHTML == 'O'
+//         && buttonSeven.innerHTML == 'O' 
+//         ) {
+//             buttonsDisabled();
+//             txtXO.innerHTML = '<span>O</span> wins!'
+//     } else if (
+//         buttonTwo.innerHTML =='O' 
+//         && buttonFive.innerHTML == 'O'
+//         && buttonEight.innerHTML == 'O' 
+//         ) {
+//             buttonsDisabled();
+//             txtXO.innerHTML = '<span>O</span> wins!'
+//     } 
+        
+            
+// }
 
 
 
