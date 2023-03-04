@@ -149,6 +149,7 @@ body {
   height: 100%;
   font-size: 100px;
   cursor: pointer;
+  background-color: rgb(137, 134, 134);
   color: white;
 }
 
