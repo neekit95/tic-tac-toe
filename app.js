@@ -76,15 +76,15 @@ function reset () {
     txtXO.innerHTML = `Turn <span> ${xo.innerHTML} </span> `; 
     xo.innerHTML = 'X';
 
-    buttonZero.style.color = '';
-    buttonOne.style.color = '';
-    buttonTwo.style.color = '';
-    buttonThree.style.color = '';
-    buttonFour.style.color = '';
-    buttonFive.style.color = '';
-    buttonSix.style.color = '';
-    buttonSeven.style.color = '';
-    buttonEight.style.color = '';
+    buttonZero.style.color = 'white';
+    buttonOne.style.color = 'white';
+    buttonTwo.style.color = 'white';
+    buttonThree.style.color = 'white';
+    buttonFour.style.color = 'white';
+    buttonFive.style.color = 'white';
+    buttonSix.style.color = 'white';
+    buttonSeven.style.color = 'white';
+    buttonEight.style.color = 'white';
 
 
 
@@ -127,15 +127,15 @@ function isEnd () {
             txtXO.innerHTML = 'It is <span>drow!</span>'
             xo.innerHTML = ''
         }
-    buttonZero.style.color = '';
-    buttonOne.style.color = '';
-    buttonTwo.style.color = '';
-    buttonThree.style.color = '';
-    buttonFour.style.color = '';
-    buttonFive.style.color = '';
-    buttonSix.style.color = '';
-    buttonSeven.style.color = '';
-    buttonEight.style.color = '';
+    buttonZero.style.color = 'white';
+    buttonOne.style.color = 'white';
+    buttonTwo.style.color = 'white';
+    buttonThree.style.color = 'white';
+    buttonFour.style.color = 'white';
+    buttonFive.style.color = 'white';
+    buttonSix.style.color = 'white';
+    buttonSeven.style.color = 'white';
+    buttonEight.style.color = 'white';
 }
 function buttonsDisabled () {
     buttonZero.disabled = true;
