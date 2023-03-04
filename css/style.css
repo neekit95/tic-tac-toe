@@ -16,7 +16,7 @@ body {
           align-items: center;
   width: 100vw;
   min-height: 100vh;
-  background-color: rgb(226, 228, 243);
+  background-color: rgb(243, 243, 243);
 }
 
 .wrapper {
@@ -46,13 +46,16 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: blanchedalmond;
   width: 80vh;
   height: 80vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-size: 50px;
+}
+.container span {
+  color: red;
 }
 
 .game {
@@ -73,7 +76,6 @@ body {
       align-content: space-evenly;
   width: 100%;
   height: 85%;
-  background-color: white;
 }
 
 .game > *:nth-child(1) {
@@ -121,7 +123,7 @@ body {
   -ms-grid-column: 3;
 }
 
-.zero {
+.zero, .one, .two, .three, .four, .five, .six, .seven, .eight {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -131,9 +133,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: black;
 }
-.zero button {
+.zero button, .one button, .two button, .three button, .four button, .five button, .six button, .seven button, .eight button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -145,9 +146,9 @@ body {
           align-items: center;
   width: 100%;
   height: 100%;
-  font-size: 50px;
+  font-size: 100px;
   cursor: pointer;
-  background-color: black;
+  background-color: rgb(137, 134, 134);
   color: white;
 }
 
@@ -169,7 +170,8 @@ body {
   height: 70%;
   border-radius: 10px;
   font-size: 20px;
-  background-color: rgb(245, 230, 255);
+  color: white;
+  background-color: black;
   border: 1px solid white;
   font-weight: 200;
 }
