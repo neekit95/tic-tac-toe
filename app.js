@@ -53,7 +53,10 @@ function reset () {
     buttonSix.style.cursor = 'pointer';
     buttonSeven.style.cursor = 'pointer';
     buttonEight.style.cursor = 'pointer';
-    txtXO.innerHTML = `Turn <span> ${xo.innerHTML} </span> `;
+    txtXO.innerHTML = `Turn <span> ${xo.innerHTML} </span> `; 
+    xo.innerHTML = 'X';
+
+
 
 
 }
