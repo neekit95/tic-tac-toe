@@ -76,6 +76,16 @@ function reset () {
     txtXO.innerHTML = `Turn <span> ${xo.innerHTML} </span> `; 
     xo.innerHTML = 'X';
 
+    buttonZero.style.color = '';
+    buttonOne.style.color = '';
+    buttonTwo.style.color = '';
+    buttonThree.style.color = '';
+    buttonFour.style.color = '';
+    buttonFive.style.color = '';
+    buttonSix.style.color = '';
+    buttonSeven.style.color = '';
+    buttonEight.style.color = '';
+
 
 
 
