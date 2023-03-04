@@ -8,8 +8,9 @@ const buttonZero = document.querySelector('.buttonZero'),
     buttonSeven = document.querySelector('.buttonSeven'),
     buttonEight = document.querySelector('.buttonEight'),
     xo = document.querySelector('.xo'),
-    buttonReset = document.querySelector('.reset'),
+    buttonReset = document.querySelector('.buttonReset'),
     txtXO = document.querySelector('.txtXO');
+
 
 buttonZero.addEventListener('click', () => enterSymbol(buttonZero) );
 buttonOne.addEventListener('click', () => enterSymbol(buttonOne) );
@@ -76,7 +77,9 @@ function enterSymbol (button) {
     button.style.cursor = 'auto';
     button.disabled = true;
     checkXO();
+    txtXO.innerHTML = `Turn <span> ${xo.innerHTML} </span> `; 
     isEnd ()
+
 }
 
 function isEnd () {
@@ -91,6 +94,7 @@ function isEnd () {
         && buttonEight.innerHTML !== ''
         ) {
             txtXO.innerHTML = 'Game is <span>over</span>'
+            xo.innerHTML = ''
         }
 }
 
