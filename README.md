@@ -1,3 +1,4 @@
-# tic-tac-toe
+# Крестики-нолики
 
-Visit https://neekit95.github.io/tic-tac-toe/
+Это проект построенный на чистом JS
+Вы можете протестировать игру [здесь](https://neekit95.github.io/tic-tac-toe/)
